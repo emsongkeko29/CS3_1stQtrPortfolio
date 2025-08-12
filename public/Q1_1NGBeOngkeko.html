@@ -1,5 +1,39 @@
-<script src="script.js">
+<body>
+    <h1> Feed Me My Snack </h1>
+    <forn action = "/action_page.php"></forn>
+        <label for="age">Enter your age</label>
+         <input type="text" id="age" name="age"><br><br> 
 
+        <label for="Enter your Max age">Enter your Max age</label>
+        <input type="text" id="maxAge" name="maxAge"><br><br>
+
+        <label for="Enter number of snacks">Enter number of snacks</label>
+        <input type="text" id="numPerDay" name="age"><br><br>
+    
+        <p> Result: </p>
+        <button type="button">Accept Input</button>
+<script>
+
+// no script tag needed here
+
+//let age = prompt("Enter age","14")
+//let maxAge = prompt("Enter maxAge", "100")
+//let numPerDay = prompt("Enter the amount of times you eat your fav snacks per day", "1")
+
+var age = 14;
+var maxAge = 100;
+var numPerDay = 1;
+var totalRequired = (number(numPerDay) * 365 * (Number(maxAge) - Number(age)));
+
+let name = window.prompt("Enter", "Your name");
+if (confirm('Are you sure?')){
+    console.log("You will need" + totalRequired + "to last until the ripe age of" + maxAge);
+}
+
+else {
+    console.log("Run the code again.");
+}
     
 </script>
+</body>
 

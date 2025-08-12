@@ -1,8 +1,9 @@
-// no script tag needed here
 
-var age = prompt("Enter age","14")
-var maxAge = prompt("Enter maxAge", "100")
-var numPerDay = prompt("Enter the amount of times you eat your fav snacks per day", "1")
+\// no script tag needed here
+
+//let age = prompt("Enter age","14")
+//let maxAge = prompt("Enter maxAge", "100")
+//let numPerDay = prompt("Enter the amount of times you eat your fav snacks per day", "1")
 
 var age = 14;
 var maxAge = 100;
