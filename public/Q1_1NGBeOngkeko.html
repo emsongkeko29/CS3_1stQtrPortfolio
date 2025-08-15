@@ -1,6 +1,6 @@
 <body>
     <h1> Feed Me My Snack </h1>
-    <forn action = "/action_page.php"></forn>
+    <form action = "/action_page.php">
         <label for="age">Enter your age</label>
          <input type="text" id="age" name="age"><br><br> 
 
@@ -8,32 +8,31 @@
         <input type="text" id="maxAge" name="maxAge"><br><br>
 
         <label for="Enter number of snacks">Enter number of snacks</label>
-        <input type="text" id="numPerDay" name="age"><br><br>
+        <input type="text" id="NumPerDay" name="age"><br><br>
     
-        <p> Result: </p>
-        <button type="button">Accept Input</button>
+        <p id="result"> Result: </p>
+        <button type="button" onclick="getData()"> Accept Input </button>
+
 <script>
+    function getData(){
+        let AGE = document.getElementById("age").value;
+        let maxAGE = document.getElementById("maxAge").value;
+        let perDay = document.getElementById("NumPerDay").value;
+        let sure = window.confirm("Are you 100% sure?");
 
-// no script tag needed here
+        //let AGE = age.value;
+        //let maxAGE = maxAge.value;
+        //let perday = NumPerDay.value;
+        //let sure = window.confirm("are u really sure?");
 
-//let age = prompt("Enter age","14")
-//let maxAge = prompt("Enter maxAge", "100")
-//let numPerDay = prompt("Enter the amount of times you eat your fav snacks per day", "1")
+        if (sure){
+            let totalRequired = (Number(perDay)* 365) * (Number(maxAGE- Number(AGE)));
+            document.getElementById("result").innerHTML = "Result: You will need " + totalRequired + "to last you until the ripe old age of " + maxAGE;
+        } else {
+            window.alert("Run the code again.");
+        }
+    }
 
-var age = 14;
-var maxAge = 100;
-var numPerDay = 1;
-var totalRequired = (number(numPerDay) * 365 * (Number(maxAge) - Number(age)));
-
-let name = window.prompt("Enter", "Your name");
-if (confirm('Are you sure?')){
-    console.log("You will need" + totalRequired + "to last until the ripe age of" + maxAge);
-}
-
-else {
-    console.log("Run the code again.");
-}
-    
 </script>
 </body>
 
