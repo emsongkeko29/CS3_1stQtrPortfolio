@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <h2> Q1 2nd Graded Exercise submitted by Estelle Ongkeko of 9-Beryllium</h2>
+
+    <label>Meal Price: </label>
+    <input type="text" id="mealPrice"><br></br>
+
+    <label>Tip: </label>
+    <input type="text" id="tipCharge"><br></br>
+
+    <label>Service (%): </label>
+    <input type="text" id="serviceCharge"><br></br>
+
+    <button onclick="totalMeal()">Accept Inputs</button>
+
+    <p id="output"></p>
+    
+    <script>
+        function totalMeal() {
+            let mp = parseFloat(document.getElementById("mealPrice").value);
+            let tip = parseFloat(document.getElementById("tipCharge").value);
+            let sc = parseFloat(document.getElementById("serviceCharge").value);       
+         
+            let totalCost = mp + tip + (sc / 100 * mp);
+            document.getElementById("output").innerHTML = "Total Meal: " + totalCost.toFixed(2);
+    
+        }
+    </script>
+<footer>
+    <p>References: 
+       <a href="https://www.w3schools.com/jsref/jsref_tofixed.asp" target="_blank">W3Schools.com. (n.d.-b). https://www.w3schools.com/jsref/jsref_tofixed.asp</a>,
+       <a href="https://www.w3schools.com/jsref/jsref_parsefloat.asp" target="_blank">W3Schools.com. (n.d.). https://www.w3schools.com/jsref/jsref_parsefloat.asp</a>
+    </p>
+</footer>
+
+</body>
+</html>
